@@ -1,0 +1,12 @@
+header {
+	background-color: lightgrey;
+	overflow: hidden;
+}
+#logo {
+	float: left;
+}
+#marque {
+	float: left;
+	width: 25%;
+	font-size: 4em;
+}
