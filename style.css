@@ -1,9 +1,21 @@
 html {
 	margin: 0 auto;
 }
-
 footer {
 	max-width: 100%;
+}
+main div {
+	overflow: hidden;
+	border: solid black 1px;
+	border-radius: 10%;
+	box-shadow: 5px 5px 5px black;
+	width : 630px;
+	margin: 20px auto;
+}
+main div a{
+	text-align: center;
+	text-decoration: none;
+	color:black;
 }
 .image_article {
 	max-width: 50%;
@@ -12,7 +24,7 @@ footer {
 #barre {
 	width: 100%;
 	border: 3px solid #45526e;
-	margin-top: 180px;
+	margin-top: 200px;
 }
 header {
 	overflow: hidden;
@@ -46,14 +58,14 @@ header {
 	margin: 0 auto;
 }
 .miniature {
-	max-width: 10%;
+	width: 100%;
 }
 .lien {
 	text-decoration: none;
 	color: white;
 }
 .labelhome {
-	max-width: 50%;
+	max-width: 100%;
 	margin: 0 auto;
 }
 #section {
