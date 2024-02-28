@@ -4,9 +4,17 @@ header {
 }
 #logo {
 	float: left;
+	width: 10%;
 }
 #marque {
 	float: left;
 	width: 25%;
 	font-size: 4em;
+}
+.miniature {
+	max-width: 10%;
+}
+.lien {
+	text-decoration: none;
+	color: white;
 }
