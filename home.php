@@ -5,7 +5,8 @@ actualites,tags,auteurs,sources,liens WHERE
 actualites.id_auteur = auteurs.id_auteur AND 
 actualites.id_tag = tags.id_tag AND 
 actualites.id_nom_source = sources.id_source AND
-actualites.id_lien = liens.id_lien';
+actualites.id_lien = liens.id_lien ORDER BY
+actualites.date_modification DESC LIMIT 5';
 $temp = $pdo -> prepare($sql);
 $temp -> execute();
 ?>
@@ -28,9 +29,9 @@ $temp -> execute();
             "<main>
                 <div>
                     <a href='article.php?id=".$t['id_actualite']." '>
-                    <img class='miniature' src='images/".$t['image']."'/>
-                    <p onload='calculMiseEnLigne()'>".$t['date_modification']."</p>
-                    <p>".$t['titre']."</p>
+                        <img class='miniature' src='images/".$t['image']."'/>
+                        <p onload='calculMiseEnLigne()'>".$t['date_modification']."</p>
+                        <p>".$t['titre']."</p>
                     </a>
                 </div>
             </main>";
