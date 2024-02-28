@@ -18,7 +18,6 @@ if (isset($_POST['soumettre'])) {
         $temp->Bindparam(":mail", $mail, PDO::PARAM_STR);
         $temp->Bindparam(":motif", $motif, PDO::PARAM_STR);
         $temp->execute();
-        $enregistrement_reussi = "Demande envoyée";
     }
 
 ?>
@@ -37,7 +36,7 @@ if (isset($_POST['soumettre'])) {
     include('header.php');
     ?>
     <div class="label_home">
-        <form action="" method="post">
+        <form action="home.php" method="post">
             <div class="label_box">
                 <label for="prenom">Prénom : </label>
                 <input type="text" name="prenom" id="prenom" placeholder="Prenom" required />
@@ -56,11 +55,6 @@ if (isset($_POST['soumettre'])) {
             </div>
                 <input type="submit" name="soumettre" value="enregistrer" />
         </form>
-        <?php 
-        if(isset($enregistrement_reussi)){
-            echo $enregistrement_reussi;
-        }
-        ?>
     </div>
     <?php 
     include('footer.php');
