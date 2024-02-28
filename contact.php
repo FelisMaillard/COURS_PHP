@@ -10,20 +10,16 @@ if (isset($_POST['soumettre'])) {
     $motif = htmlentities($_POST['motif']);
 
     //On définit la requête sql qui va envoyer toutes les données a la base de données
-    $sql = 'INSERT INTO contacts (prenom_contact, nom_contact, email_contact, motif) 
-            VALUES (:prenom, :nom, :mail, :tel, :motif)';
-    try {
+    $sql = 'INSERT INTO contacts (prenom_contact, nom_contact, mail_contact, motif) 
+            VALUES (:prenom, :nom, :mail, :motif)';
         $temp = $pdo->prepare($sql);
         $temp->Bindparam(":prenom", $prenom, PDO::PARAM_STR);
         $temp->Bindparam(":nom", $nom, PDO::PARAM_STR);
         $temp->Bindparam(":mail", $mail, PDO::PARAM_STR);
-        $temp->Bindparam(":projet", $motif, PDO::PARAM_STR);
+        $temp->Bindparam(":motif", $motif, PDO::PARAM_STR);
         $temp->execute();
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getmotif();
-        exit();
+        $enregistrement_reussi = "Demande envoyée";
     }
-}
 
 ?>
 
@@ -41,31 +37,31 @@ if (isset($_POST['soumettre'])) {
     include('header.php');
     //include('nav.php');
     ?>
-        <div class="content_home">
-        <div class="sun">
-            <div class="line"></div>
-        </div>
-            <div class="label_home">
-            <form action="Home.php" method="post">
-                <div class="label_box">
-            <label for="prenom">Prénom : </label>
-            <input type="text" name="prenom" id="prenom" placeholder="Prenom" required />
-        </div>
-        <div class="label_box">
-            <label for="nom">Nom : </label>
-            <input type="text" name="nom" id="nom" placeholder="Nom" required />
-        </div>
-        <div class="label_box">
-            <label for="email">Email : </label> 
-            <input type="text" name="email" id="email" placeholder="exemple@gmail.com" required />
-        <div class="label_box_projet">
-            <label for="motif">Raison de votre demande : </label>
-            <textarea name="motif" id="motif" ></textarea>
-        </div>
-            <input type="submit" href="enregistrement_reussie.php" name="soumettre" value="enregistrer" />
-        </form>
+    <div class="label_home">
+        <form action="" method="post">
+            <div class="label_box">
+                <label for="prenom">Prénom : </label>
+                <input type="text" name="prenom" id="prenom" placeholder="Prenom" required />
             </div>
-        </div>
+            <div class="label_box">
+                <label for="nom">Nom : </label>
+                <input type="text" name="nom" id="nom" placeholder="Nom" required />
+            </div>
+            <div class="label_box">
+                <label for="email">Email : </label> 
+                <input type="text" name="email" id="email" placeholder="exemple@gmail.com" required />
+            </div>
+            <div class="label_box_projet">
+                <label for="motif">Raison de votre demande : </label>
+                <textarea name="motif" id="motif" ></textarea>
+            </div>
+                <input type="submit" name="soumettre" value="enregistrer" />
+        </form>
+        <?php 
+        if(isset($enregistrement_reussi)){
+            echo $enregistrement_reussi;
+        }
+        ?>
     </div>
     <?php 
     include('footer.php');

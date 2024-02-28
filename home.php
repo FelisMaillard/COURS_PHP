@@ -27,9 +27,11 @@ $temp -> execute();
             echo 
             "<main>
                 <div>
+                    <a href='article.php?id=".$t['id_actualite']." '>
                     <img class='miniature' src='images/".$t['image']."'/>
                     <p onload='calculMiseEnLigne()'>".$t['date_modification']."</p>
-                    <a href='article.php?id=".$t['id_actualite']." '>".$t['titre']."</a>
+                    <p>".$t['titre']."</p>
+                    </a>
                 </div>
             </main>";
         }
