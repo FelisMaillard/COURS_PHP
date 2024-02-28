@@ -1,5 +1,20 @@
+html {
+	margin: 0 auto;
+}
+
+footer {
+	max-width: 100%;
+}
+.image_article {
+	max-width: 50%;
+	margin: 0 auto;
+}
+#barre {
+	width: 100%;
+	border: 3px solid #45526e;
+	margin-top: 180px;
+}
 header {
-	background-color: lightgrey;
 	overflow: hidden;
 }
 #logo {
@@ -21,7 +36,7 @@ header {
 }
 .nav {
 	float: left;
-	color: white;
+	color: black;
 	text-decoration: none;
 	margin: 0 auto;
 	width: 20%;
@@ -40,4 +55,8 @@ header {
 .labelhome {
 	max-width: 50%;
 	margin: 0 auto;
+}
+#section {
+	margin: 0 auto;
+	width: 1260px;
 }

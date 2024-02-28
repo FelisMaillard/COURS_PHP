@@ -27,7 +27,6 @@ if (isset($_GET['id'])) {
 <body>
     <?php 
     include('header.php');
-    //include('nav.php');
     foreach ($temp as $t){
         echo 
         "<main>
@@ -35,7 +34,7 @@ if (isset($_GET['id'])) {
                 <h2>".$t['titre']."</h2>                
                 <h3>".$t['sous_titre']."</h3>
                 <aside>
-                    <img src='images/".$t['image']."'/>
+                    <img class='image_article' src='images/".$t['image']."'/>
                     <img src=images/".$t['photo']."/>
                     <p>".$t['nom_auteur']. ' ' .$t['fonction']."</p>
                     <p>Publié le : ".$t['date_publication'].' Dénière modification le : ' .$t['date_modification']."</p>
@@ -47,7 +46,7 @@ if (isset($_GET['id'])) {
             </section>
         </main>"; 
     }
-    //include('footer.php')
+    include('footer.php')
     ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

@@ -37,7 +37,7 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
-              information réglementaire
+              Mention légale
             </h6>
           </div>
 

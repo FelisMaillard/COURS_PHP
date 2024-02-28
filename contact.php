@@ -35,7 +35,6 @@ if (isset($_POST['soumettre'])) {
 <body>
     <?php 
     include('header.php');
-    //include('nav.php');
     ?>
     <div class="label_home">
         <form action="" method="post">

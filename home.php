@@ -22,7 +22,6 @@ $temp -> execute();
 	<body>
         <?php 
         include('header.php');
-        //include('nav.php');
         foreach ($temp as $t){
             $date_modification = $t['date_modification'];
             echo 
