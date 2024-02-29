@@ -11,5 +11,4 @@
         <a href="#" class="nav"><p >Politique</p></a>
     </div>
     <p id='barre'></p>
-
 </header>

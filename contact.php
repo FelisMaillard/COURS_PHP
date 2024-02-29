@@ -52,6 +52,7 @@ if (isset($_POST['soumettre'])) {
             </div>
             <div class="label_box_projet">
                 <label for="motif">Raison de votre demande : </label>
+                <!-- pourquoi pas de required? -->
                 <textarea name="motif" id="motif" ></textarea>
             </div>
                 <input type="submit" name="soumettre" value="enregistrer" />
