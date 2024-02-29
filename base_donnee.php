@@ -1,3 +1,4 @@
+<!-- balise php dans la page ou tu l'utilise (selon les bonnes pratiques (je crois)) -->
 <?php
 
     //script de connexion

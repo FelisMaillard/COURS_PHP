@@ -1,4 +1,8 @@
   <!-- Footer -->
+
+  <!-- la balise footer c'est mieux de la laisser sur la page -->
+  <!-- le style jamais dans le html -->
+
   <footer
           class="text-center text-lg-start text-white"
           style="background-color: #45526e"
@@ -52,14 +56,17 @@
       </section>
       <!-- Section: Links -->
         <!-- Section: Copyright -->
+
+        <!-- mauvaise identation -->
+        
         <section class="p-3 pt-0">
         <div class="row d-flex align-items-center">
              <!-- Grid column -->
           <div class="col-md-7 col-lg-8 text-center text-md-start">
             <!-- Copyright -->
             <div class="p-3">
+              <!-- a mettre dans une balise -->
               © 2024 Copyright :
-                
             </div>
             <!-- Copyright -->
           </div>
